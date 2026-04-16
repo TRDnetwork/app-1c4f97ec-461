@@ -1,0 +1,12 @@
+node_modules
+.env
+.git
+.gitignore
+*.md
+tests/
+Dockerfile
+docker-compose.yml
+nginx.conf
+README-deploy.md
+railway.json
+render.yaml

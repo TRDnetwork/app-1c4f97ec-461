@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  frontend:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+    # In a real scenario, you might inject env vars into the static files at runtime.
+    # This compose file is minimal since the app relies on external Supabase.
+    # For local dev with a local Supabase, you'd add a supabase service.
+    # This setup assumes Supabase is external.
+    restart: unless-stopped
